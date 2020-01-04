@@ -4,11 +4,11 @@ The Edit log of my BP Hack
 Grid & Camera Zoom hack
 
 
-BaseGameMode.InitGameMode
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine.SceneManagement;
-if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeType.Sandbox && WPFMonoBehaviour.levelManager.CurrentGameMode is BaseGameMode)
+		BaseGameMode.InitGameMode
+		using System.Collections.Generic;
+		using System.Linq;
+		using UnityEngine.SceneManagement;
+		if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeType.Sandbox && 				WPFMonoBehaviour.levelManager.CurrentGameMode is BaseGameMode)
 		{
 			List<int> intList = new List<int>
 			{
