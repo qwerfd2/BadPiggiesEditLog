@@ -29,14 +29,15 @@ if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeTyp
 		}
 ---------------------------------
 LevelManager.CurrentConstructionGridRows
-get
+		
+		
+		get
 		{
 			if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeType.Sandbox && WPFMonoBehaviour.levelManager.CurrentGameMode is BaseGameMode)
 			{
 				return new List<int>
 				{
 					4095,
-
 					4095,
 					4095,
 					4095,
@@ -50,7 +51,9 @@ get
 		}
 ------------------------------------------------
 InGameCamera.Start
-if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeType.Sandbox && WPFMonoBehaviour.levelManager.CurrentGameMode is BaseGameMode)
+		
+		
+		if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeType.Sandbox && 					WPFMonoBehaviour.levelManager.CurrentGameMode is BaseGameMode)
 		{
 			this.m_cameraBuildZoom = 7.5f;
 		}
@@ -60,7 +63,9 @@ if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeTyp
 		}
 ----------------------------
 SnoutCoin: 
-  public static void AddSnoutCoins(int count)
+ 		
+		
+		public static void AddSnoutCoins(int count)
 	{
 		if (Singleton<BuildCustomizationLoader>.Instance.IsOdyssey)
 		{
@@ -71,45 +76,54 @@ SnoutCoin:
 	}
   --------------------------
 Scrap:
-  	public static bool UseScrap(int amount)
+  	
+	
+	public static bool UseScrap(int amount)
 	{
 		int @int = GameProgress.m_data.GetInt("Scrap", 0);
 		if (@int >= amount)
 		{
-  //deleted amount -= @int
-			GameProgress.m_data.SetInt("Scrap", @int);
-			if (GameProgress.OnScrapAmountChanged != null)
-			{
-				GameProgress.OnScrapAmountChanged();
-			}
-			return true;
+  		//deleted amount -= @int
+		GameProgress.m_data.SetInt("Scrap", @int);
+		if (GameProgress.OnScrapAmountChanged != null)
+		{
+		GameProgress.OnScrapAmountChanged();
+		}
+		return true;
 		}
 		return false;
 	}
   ---------------------
 Powerups:
-  public static int BluePrintCount()
+  
+  
+	public static int BluePrintCount()
 	{
 		return 99999;
 	}
   // the same as all other Counts (supermagnets, glues, etc.)
   ---------
   Desert Count
-  public static int DessertCount(string dessertName)
+ 
+ 
+ 	public static int DessertCount(string dessertName)
 	{
 		return 9999;
 	}
   -------------------------
 Level3Star:
-public static int GetRaceLevelUnlockedStars()
+	
+	
+	public static int GetRaceLevelUnlockedStars()
 	{
 		return 3;
 	}
- // and
+	 // and
 
 -----------
 Unlock all level:
-public static bool AllLevelsUnlocked()
+		
+		public static bool AllLevelsUnlocked()
 	{
 		return true;
 	}
@@ -118,8 +132,8 @@ public static bool AllLevelsUnlocked()
 Large amounts of parts:
 
 
- GameProgress.InitializeGameProgressData //inserted in this method
- IEnumerator enumerator = Enum.GetValues(typeof(BasePart.PartType)).GetEnumerator();
+ 		GameProgress.InitializeGameProgressData //inserted in this method
+		IEnumerator enumerator = Enum.GetValues(typeof(BasePart.PartType)).GetEnumerator();
 		try
 		{
 			while (enumerator.MoveNext())
@@ -144,9 +158,11 @@ Large amounts of parts:
   -----------------------
 
 Sandbox Fix
-//原理：Instance.CurrentSceneName里有所有的沙盒名字，通过存档Dump可以得知问题沙盒关卡为"Episode_6_Ice Sandbox"，其他类推。详见最下方完美存档Dump
-BaseGameMode.InitGameMode
-if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
+		
+		
+		//原理：Instance.CurrentSceneName里有所有的沙盒名字，通过存档Dump可以得知问题沙盒关卡为"Episode_6_Ice Sandbox"，其他类推。详见		最下方完美存档Dump
+		BaseGameMode.InitGameMode
+		if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
 		{
 			List<int> currentConstructionGridRows = new List<int>
 			{
@@ -159,8 +175,10 @@ if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.Curre
 			base.CurrentConstructionGridRows = currentConstructionGridRows;
 		}
 -------------------
-LevelManager.CurrentConstructionGridRows
-if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
+		
+		
+		LevelManager.CurrentConstructionGridRows
+		if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
 			{
 				return new List<int>
 				{
@@ -172,8 +190,10 @@ if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.Curre
 				};
 			}
 -----------------------
-InGameCamera.Start
-if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
+		
+		
+		InGameCamera.Start
+		if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
 		{
 			this.m_cameraBuildZoom = 5.5f;
 		}
@@ -182,6 +202,8 @@ if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.Curre
 
 完美存档dump
 //方法：更改游戏Crypto算法的Encrypt，让其直接return clearTextByte。
+		
+		
 <data>
   <Boolean key="GameProgress_initialized" value="True" />
   <String key="InstallVersion" value="2.3.6" />
