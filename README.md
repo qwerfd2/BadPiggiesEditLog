@@ -2,12 +2,12 @@
 The Edit log of my BP Hack
 -------------------
 Grid & Camera Zoom hack
------------------
+
+
 BaseGameMode.InitGameMode
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.SceneManagement;
-
 if (Singleton<GameManager>.Instance.CurrentEpisodeType == GameManager.EpisodeType.Sandbox && WPFMonoBehaviour.levelManager.CurrentGameMode is BaseGameMode)
 		{
 			List<int> intList = new List<int>
@@ -115,7 +115,8 @@ public static bool AllLevelsUnlocked()
   ----------------
   
 Large amounts of parts:
------------------
+
+
  GameProgress.InitializeGameProgressData //inserted in this method
  IEnumerator enumerator = Enum.GetValues(typeof(BasePart.PartType)).GetEnumerator();
 		try
@@ -141,6 +142,38 @@ Large amounts of parts:
 		}
   -----------------------
 
-
-
+Sandbox Fix
+//原理：Instance.CurrentSceneName里有所有的沙盒名字，通过存档Dump可以得知问题沙盒关卡为"Episode_6_Ice Sandbox"，其他类推。详见最下方完美存档Dump
+BaseGameMode.InitGameMode
+if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
+		{
+			List<int> currentConstructionGridRows = new List<int>
+			{
+				4095,
+				4095,
+				4095,
+				4095,
+				4095
+			};
+			base.CurrentConstructionGridRows = currentConstructionGridRows;
+		}
+-------------------
+LevelManager.CurrentConstructionGridRows
+if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
+			{
+				return new List<int>
+				{
+					4095,
+					4095,
+					4095,
+					4095,
+					4095
+				};
+			}
+-----------------------
+InGameCamera.Start
+if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
+		{
+			this.m_cameraBuildZoom = 5.5f;
+		}
 
