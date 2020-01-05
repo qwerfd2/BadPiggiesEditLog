@@ -79,6 +79,23 @@ SnoutCoin:
 		GameProgress.m_data.SetInt("SnoutCoins", 99999);
 	}
   --------------------------
+ChestCombo:
+		
+		
+		private void GiveLootCrate(LootCrateType crateType, int amount, string price, string gainType)
+		{
+		GameProgress.AddLootcrate(LootCrateType.Wood, amount);
+		GameProgress.AddLootcrate(LootCrateType.Metal, amount);
+		GameProgress.AddLootcrate(LootCrateType.Gold, amount);
+		GameProgress.AddLootcrate(LootCrateType.Cardboard, amount);
+		GameProgress.AddLootcrate(LootCrateType.Glass, amount);
+		GameProgress.AddLootcrate(LootCrateType.Bronze, amount);
+		GameProgress.AddLootcrate(LootCrateType.Marble, amount);
+		WorkshopMenu.AnyLootCrateCollected = true;
+		Camera hudCamera = Singleton<GuiManager>.Instance.FindCamera();
+		LootCrate.SpawnLootCrateOpeningDialog(crateType, amount, hudCamera, null, new LootCrate.AnalyticData(gainType, price, 	LootCrate.AdWatched.NotApplicaple));
+	}
+---------------
 Scrap:
   	
 	
