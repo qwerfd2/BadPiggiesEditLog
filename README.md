@@ -226,7 +226,13 @@ Sandbox Fix
 		}
 
 ----------------
+Ad annihilation & Daily Chest DirecUnlock
 
+		//(Very unprofessionally) Completely delete AdvertisementManager.Initialize and set all the below texture2D to return null.
+		//Make all methods that used DailyChallenge.Revealed and adRevealed return true on both boolean.
+----------------	
 完美存档dump
-//方法：更改游戏Crypto算法的Encrypt，让其直接return clearTextByte。详见附件progress.dat		
+//方法：更改游戏Crypto算法的Encrypt，让其直接return clearTextByte。详见附件progress.dat	
+
+
 强烈建议阅读https://www.h3xed.com/mobile/how-to-edit-bad-piggies-levels-building-grid-source-code 虽然文章中的方法已经不可用，但是此文章解释了上表中的intList和4095的来源。
