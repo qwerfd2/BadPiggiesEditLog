@@ -1,7 +1,7 @@
-# BadPiggiesEditLog
-The Edit log of my BP Hack - tools needed：DnSpy， Apktool， and JDK。
+# BadPiggiesEditLog捣蛋猪更改日志
+The Edit log of my BP Hack - tools needed：DnSpy， Apktool， and JDK。需要的工具：DnSpy， Apktool， 和 JDK
 -------------------
-Process map: Raw APK ---> Apktool unpack ---> assets/bin/Data/Managed/Assembly-CSharp.dll ---> edit via DnSpy --->Apktool pack ---> JDK keystore & jarsigner ---> hacked APK!
+Process map: Raw APK ---> Apktool unpack ---> assets/bin/Data/Managed/Assembly-CSharp.dll ---> edit & save via DnSpy --->Apktool pack ---> JDK keystore & jarsigner ---> hacked APK! 原版APK--->Apktool解包--->assets/bin/Data/Managed/Assembly-CSharp.dll--->用DnSpy更改保存--->Apktool压包--->JDK keystore & jarsigner ---> 破解APK!
 
 
 Grid & Camera Zoom hack
