@@ -2,6 +2,8 @@
 The Edit log of my BP Hack - tools needed：DnSpy， Apktool， and JDK。
 -------------------
 Process map: Raw APK ---> Apktool unpack ---> assets/bin/Data/Managed/Assembly-CSharp.dll ---> edit via DnSpy --->Apktool pack ---> JDK keystore & jarsigner ---> hacked APK!
+
+
 Grid & Camera Zoom hack
 
 
