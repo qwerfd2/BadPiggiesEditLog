@@ -1,6 +1,7 @@
 # BadPiggiesEditLog捣蛋猪更改日志
 The Edit log of my BP Hack - tools needed：DnSpy， Apktool， and JDK。需要的工具：DnSpy， Apktool， 和 JDK
 -------------------
+APK下载链接： 链接:[有效] https://pan.baidu.com/s/1obd74lw6-lIzv2Ib2Pswuw 提取码:9094复制这段内容后打开百度网盘手机App，操作更方便哦
 Process map: Raw APK ---> Apktool unpack ---> assets/bin/Data/Managed/Assembly-CSharp.dll ---> edit & save via DnSpy --->Apktool pack ---> JDK keystore & jarsigner ---> hacked APK! 原版APK--->Apktool解包--->assets/bin/Data/Managed/Assembly-CSharp.dll--->用DnSpy更改保存--->Apktool压包--->JDK keystore & jarsigner ---> 破解APK!
 
 
