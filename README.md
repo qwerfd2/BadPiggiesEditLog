@@ -164,6 +164,8 @@ Sandbox Fix
 		
 		
 		//原理：Instance.CurrentSceneName里有所有的沙盒名字，通过存档Dump可以得知问题沙盒关卡为"Episode_6_Ice Sandbox"，其他类推。详见最下方完美存档Dump
+		
+		//同理，你也可以把SceneName换成其他的名字，来fine tune不同关卡的格子。
 		BaseGameMode.InitGameMode
 		if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
 		{
