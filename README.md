@@ -14,7 +14,7 @@ Raw APK ---> Apktool unpack ---> assets/bin/Data/Managed/Assembly-CSharp.dll ---
 
 Grid & Camera Zoom hack
 
-
+		//效果：横12（4095）纵8（intList.Size == 8)
 		BaseGameMode.InitGameMode
 		using System.Collections.Generic;
 		using System.Linq;
@@ -129,7 +129,7 @@ Powerups:
 	{
 		return 99999;
 	}
-  // the same as all other Counts (supermagnets, glues, etc.)
+  	// the same as all other Counts (supermagnets, glues, etc.)
   ---------
   Desert Count
  
@@ -191,6 +191,8 @@ Sandbox Fix
 		//原理：Instance.CurrentSceneName里有所有的沙盒名字，通过存档Dump可以得知问题沙盒关卡为"Episode_6_Ice Sandbox"，其他类推。详见最下方完美存档Dump
 		
 		//同理，你也可以把SceneName换成其他的名字，来fine tune不同关卡的格子。
+		
+		//效果：横8（4095）纵5（currentConstructionGridRows.Size == 5）
 		BaseGameMode.InitGameMode
 		if (object.Equals("Episode_6_Ice Sandbox", Singleton<GameManager>.Instance.CurrentSceneName))
 		{
@@ -233,9 +235,15 @@ Ad annihilation & Daily Chest DirecUnlock
 
 		//(Very unprofessionally) Completely delete AdvertisementManager.Initialize and set all the below texture2D to return null.
 		//Make all methods that used DailyChallenge.Revealed and adRevealed return true on both boolean.
-----------------	
-完美存档dump
-//方法：更改游戏Crypto算法的Encrypt，让其直接return clearTextByte。详见附件progress.dat	
+----------------
+SuperMagnet
+		
+		//Due to relativity to online cheats this part is emitted.
+		
+		//因为可以被用作联机模式作弊此部分省略
+		
+		
+完美存档dump方法：更改游戏Crypto算法的Encrypt，让其直接return clearTextByte。详见附件progress.dat	
 
 
 强烈建议阅读https://www.h3xed.com/mobile/how-to-edit-bad-piggies-levels-building-grid-source-code 虽然文章中的方法已经不可用，但是此文章解释了上表中的intList和4095的来源。
