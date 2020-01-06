@@ -9,7 +9,7 @@ APK下载链接： 链接:[有效] https://pan.baidu.com/s/1obd74lw6-lIzv2Ib2Psw
 APK Download Link: https://drive.google.com/file/d/1EXA7BfBxwkxVyyV1hoY-abqDtSnLiC7p/view?usp=sharing
 
 
-Wanna make ur own crack? Follow the below process! 想要破解适合自己的版本吗？下面的流程图走起！
+Wanna make ur own crack? Follow the process below! 想要破解适合自己的版本吗？下面的流程图走起！
 
 
 Raw APK ---> Apktool unpack ---> assets/bin/Data/Managed/Assembly-CSharp.dll ---> edit & save via DnSpy --->Apktool pack ---> JDK keystore & jarsigner ---> hacked APK! 
