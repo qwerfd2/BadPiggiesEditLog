@@ -167,7 +167,7 @@ Unlock all level:
   
 Large amounts of parts:
 
-
+		//使用了CheatsUtility里的代码-详见https://tcrf.net/Bad_Piggies_(Android)
  		GameProgress.InitializeGameProgressData //inserted in this method
 		IEnumerator enumerator = Enum.GetValues(typeof(BasePart.PartType)).GetEnumerator();
 		try
