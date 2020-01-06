@@ -1,15 +1,23 @@
 # BadPiggiesEditLog捣蛋猪更改日志
 The Edit log of my BP Hack - tools needed：DnSpy， Apktool， and JDK。需要的工具：DnSpy， Apktool， 和 JDK
 -------------------
+
+
 APK下载链接： 链接:[有效] https://pan.baidu.com/s/1obd74lw6-lIzv2Ib2Pswuw 提取码:9094
 
 
 APK Download Link: https://drive.google.com/file/d/1EXA7BfBxwkxVyyV1hoY-abqDtSnLiC7p/view?usp=sharing
 
 
+Wanna make ur own crack? Follow the below process! 想要破解适合自己的版本吗？下面的流程图走起！
+
+
 Raw APK ---> Apktool unpack ---> assets/bin/Data/Managed/Assembly-CSharp.dll ---> edit & save via DnSpy --->Apktool pack ---> JDK keystore & jarsigner ---> hacked APK! 
 
 原版APK--->Apktool解包--->assets/bin/Data/Managed/Assembly-CSharp.dll--->用DnSpy更改保存--->Apktool压包--->JDK keystore & jarsigner ---> 破解APK!
+
+
+Below are some of my custom codes that does naughty things :) Feel free to use them but be sure to understand em first!
 
 
 Grid & Camera Zoom hack
@@ -238,7 +246,7 @@ Ad annihilation & Daily Chest DirecUnlock
 ----------------
 SuperMagnet
 		
-		//Due to relativity to online cheats this part is emitted.
+		//Due to relativity to online cheats this part is omitted.
 		
 		//因为可以被用作联机模式作弊此部分省略
 		
